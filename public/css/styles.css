@@ -1,0 +1,144 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* NAVBAR - TOP SECTION */
+.brand-logo {
+  font-family: 'Pacifico', cursive;
+  padding-left: 20px;
+}
+
+/* CATEGORIES SECTION */
+#categories {
+  margin-top: 3rem;
+}
+
+.category-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.category-img {
+  width: 170px;
+  display: block;
+  margin: auto;
+}
+
+.category-name {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#categories p {
+  color: #546e7a;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+#categories p:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  height: 3px;
+  background-color: #546e7a;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s;
+}
+
+#categories p:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  height: 3px;
+  background-color: #546e7a;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+#categories p:hover::before {
+  transform: scaleX(1);
+}
+
+#categories p:hover::after {
+  transform: scaleX(1);
+}
+
+/* Swiper */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* Titles */
+h3 {
+  font-weight: bold;
+  color: #546e7a;
+}
+
+/* Cards in Swiper */
+.card {
+  height: 400px;
+  text-align: left;
+}
+
+.card-title {
+  padding: 4px 14px !important;
+}
+
+.card-content{
+  padding-bottom: 0 !important;
+}
+
+.card-image img {
+  object-fit: cover;
+  height: 200px;
+}
+
+
+/* Footer Section */
+.page-footer {
+  background-color: #546e7a;
+}
+
+.brand-footer{
+  font-family: 'Pacifico', cursive;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  .brand-logo {
+    padding-left: 15px !important;
+  }
+}

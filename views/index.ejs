@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- BOOTSTRAP CDN -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- SLIDER MDN -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <title>Cocina Judía</title>
+</head>
+
+<body>
+
+
+  <nav>
+    <div class="nav-wrapper  blue-grey darken-1">
+      <a href="#" class="brand-logo">Cocina Judía</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Iniciar Sesión</a></li>
+        <li><a href="/">Registrarse</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Iniciar Sesión</a></li>
+    <li><a href="/">Registrarse</a></li>
+  </ul>
+
+  <nav>
+    <div class="nav-wrapper white">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons blue-grey-text text-darken-1">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+
+  <section id="categories">
+    <div class="container categories-container justify-content-between">
+      <div class="row">
+
+        <div class="col s6 l4 category-container waves-effect waves-light"><a href="/">
+            <img class="category-img circle" src="https://i.imgur.com/b3OwlYD.jpg" alt="sefaradi-img">
+            <p class="category-name">Sefaradi</p>
+          </a></div>
+        <div class="col s6 l4 category-container waves-effect waves-light"><a href="/">
+            <img class="category-img circle" src="https://i.imgur.com/koJKOSI.jpg">
+            <p class="category-name">Platos fuertes</p>
+          </a></div>
+        <div class="col s6 l4 category-container waves-effect waves-light"><a href="/">
+            <img class="category-img circle" src="https://i.imgur.com/T0vdNQP.jpg" alt="entradas-img">
+            <p class="category-name">Entradas</p>
+          </a></div>
+        <div class="col s6 l4 category-container waves-effect waves-light"><a href="/">
+            <img class="category-img circle" src="https://i.imgur.com/LKJcYRt.jpg" alt="ashkenazi-img">
+            <p class="category-name">Ashkenazi</p>
+          </a></div>
+        <div class="col s6 l4 category-container waves-effect waves-light"><a href="/">
+            <img class="category-img circle" src="https://i.imgur.com/HImtTOF.jpg" alt="dulce-img">
+            <p class="category-name">Dulce</p>
+          </a></div>
+        <div class="col s6 l4 category-container waves-effect waves-light"><a href="/">
+            <img class="category-img circle" src="https://i.imgur.com/rsMt0IM.jpg" alt="shabat-img">
+            <p class="category-name">Shabat</p>
+          </a></div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="top-5-week">
+<h3 class="center-align">Top 5 Semanal</h1>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/rsMt0IM.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/rsMt0IM.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/rsMt0IM.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/rsMt0IM.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/rsMt0IM.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+  </section>
+
+  <section id="top-5-all-time">
+  <h3 class="center-align">Top 5 Histórico</h3>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/koJKOSI.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/koJKOSI.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/koJKOSI.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/koJKOSI.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/koJKOSI.jpg">
+              <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+            </div>
+            <div class="card-content">
+              <p><strong>Kippe al horno</strong></p>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+  </section>
+
+  <footer class="page-footer">
+           <div class="container">
+             <div class="row">
+               <div class="col l4 s12">
+                 <h5 class="white-text brand-footer">Cocina Judía</h5>
+               </div>
+               <div class="col l4  s12">
+                 <h5 class="white-text">Nuestras redes</h5>
+                 <ul>
+                   <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                   <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                   <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                 </ul>
+               </div>
+               <div class="col l4 s12">
+                 <h5 class="white-text">Conocenos</h5>
+                 <ul>
+                   <li><a class="grey-text text-lighten-3" href="#!">Sobre nosotros</a></li>
+                   <li><a class="grey-text text-lighten-3" href="#!">Contacto</a></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+
+           <div class="footer-copyright">
+             <div class="container center-align">
+             © 2021 Cocina Judía
+             </div>
+           </div>
+         </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
