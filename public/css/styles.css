@@ -24,7 +24,7 @@ section {
 }
 
 .category-img {
-  width: 170px;
+  width: 100%;
   display: block;
   margin: auto;
 }

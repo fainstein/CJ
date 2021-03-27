@@ -4,15 +4,18 @@ $(document).ready(function(){
 
 const swiper = new Swiper('.swiper-container', {
   grabCursor: true,
-centeredSlides: true,
   breakpoints: {
     // when window width is >= 320px
 
     0: {
-      slidesPerView: 2,
-      spaceBetween: 30
+      slidesPerView: 1,
+      spaceBetween: 20
     },
-    // when window width is >= 640px
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 840px
     840: {
       slidesPerView: 3,
       spaceBetween: 40
