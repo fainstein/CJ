@@ -27,6 +27,7 @@ section {
   width: 100%;
   display: block;
   margin: auto;
+  max-width: 200px;
 }
 
 .category-name {
