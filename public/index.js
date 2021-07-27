@@ -33,8 +33,8 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
-  // $('.dropdown-trigger').dropdown();
+// $('.dropdown-trigger').dropdown();
 
-// $(".dropdown-menu li a").click(function(){
-//   $(".btn:first-child").html($(this).text()+' <span class="caret"></span>');
-// });
+$(".dropdown-menu li a").click(function(){
+  $(".btn:first-child").html($(this).text()+' <span class="caret"></span>');
+});
