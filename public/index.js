@@ -1,3 +1,7 @@
+// INIT AOS
+AOS.init();
+
+// INIT SIDDENAV
 $(document).ready(function(){
   $('.sidenav').sidenav();
 });
@@ -5,8 +9,6 @@ $(document).ready(function(){
 const swiper = new Swiper('.swiper-container', {
   grabCursor: true,
   breakpoints: {
-    // when window width is >= 320px
-
     0: {
       slidesPerView: 1,
       spaceBetween: 20
@@ -15,7 +17,6 @@ const swiper = new Swiper('.swiper-container', {
       slidesPerView: 2,
       spaceBetween: 20
     },
-    // when window width is >= 840px
     840: {
       slidesPerView: 3,
       spaceBetween: 40
@@ -25,13 +26,15 @@ const swiper = new Swiper('.swiper-container', {
       spaceBetween: 40
     }
   },
-
-  // slidesPerView: 2,
-  // spaceBetween: 30,
-
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 });
+
+  // $('.dropdown-trigger').dropdown();
+
+// $(".dropdown-menu li a").click(function(){
+//   $(".btn:first-child").html($(this).text()+' <span class="caret"></span>');
+// });
