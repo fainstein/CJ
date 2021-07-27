@@ -154,3 +154,12 @@ h3 {
     padding-left: 15px !important;
   }
 }
+
+
+/* RESULTS PAGE */
+
+#results-section .card {
+max-width: 500px;
+position: relative;
+margin: .5rem auto 1rem;
+}

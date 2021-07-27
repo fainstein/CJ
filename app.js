@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/results/:category", function(req, res) {
-  console.log("category", req.params.category);
+  // console.log("category", req.params.category);
   res.render("results", {categoryName: req.params.category});
 });
 
@@ -36,7 +36,7 @@ app.get("/register", function(req, res) {
 });
 
 app.post("/results", function(req, res) {
-  console.log(req.body.searchQuery);
+  // console.log(req.body.searchQuery);
   res.redirect("/results/" + req.body.searchQuery)
 })
 
