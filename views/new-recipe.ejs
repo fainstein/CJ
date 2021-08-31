@@ -1,0 +1,26 @@
+<%- include("partials/header"); -%>
+
+<section class="new-recipe-section">
+<h1>Sube tu receta a Cocina Judía! HOLA</h1>
+<p>Cocina Judía es una comunidad familiar, de tradiciones y legado. Tu receta puede embellecer la mesa y el tiempo en familia del resto. Tenés un truco bajo la manga? Una receta antigua? </p>
+
+<div class="container">
+  <form action="/new-recipe" method="post">
+
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">textsms</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Autocomplete</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
+</section>
+
+<%- include("partials/footer"); -%>
