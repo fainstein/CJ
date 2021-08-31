@@ -13,11 +13,13 @@ section {
   padding-left: 20px;
 }
 
-
+/******************************** MAIN PAGE ********************************/
 
 /* CATEGORIES SECTION */
 #categories {
   margin-top: 3rem;
+  max-width: 1500px;
+  margin: 3rem auto 0;
 }
 
 .category-container {
@@ -131,12 +133,6 @@ h3 {
 }
 
 
-/* RESULTS PAGE */
-/* .material-icons.drop-down-icon{
-  position: relative;
-  top: 6px;
-} */
-
 /* Footer Section */
 .page-footer {
   background-color: #546e7a;
@@ -148,18 +144,38 @@ h3 {
   color: #FFF;
 }
 
-/* MEDIA QUERIES */
-@media (min-width: 992px) {
-  .brand-logo {
-    padding-left: 15px !important;
-  }
+
+
+/******************************** CONTACT PAGE ********************************/
+
+.contact-section, .about-section {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
+.contact-section {
+  padding-bottom: 3rem;
+}
 
-/* RESULTS PAGE */
+.submit {
+  margin-top: 25px;
+}
+
+input, label, option {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/******************************** RESULTS PAGE ********************************/
 
 #results-section .card {
 max-width: 500px;
 position: relative;
 margin: .5rem auto 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  .brand-logo {
+    padding-left: 15px !important;
+  }
 }

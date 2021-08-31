@@ -1,0 +1,44 @@
+<%- include("partials/header"); -%>
+
+<section class="contact-section">
+
+
+<h2>Contacto</h2>
+<p>Si buscás ponerte en contacto con nosotros, te estaremos respondiendo a la brevedad</p>
+<form class="contact-form col s12" action="https://formspree.io/f/xleaagja" method="POST" >
+
+    <div class="row">
+      <div class="input-field col s12 m6">
+        <input name="first_name" id="first_name" type="text" class="validate" required>
+        <label for="first_name">Nombre</label>
+      </div>
+      <div class="input-field col s12 m6">
+        <input name="last_name" id="last_name" type="text" class="validate" required>
+        <label for="last_name">Apellido</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input name="email" id="email" type="email" class="validate" required>
+        <label for="email">Correo electrónico</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea name="message" id="message" class="materialize-textarea" data-length="256" required></textarea>
+        <label for="message">Mensaje</label>
+      </div>
+    </div>
+
+    <button class="btn waves-effect waves-light blue-grey darken-1 submit" type="submit" name="action">Enviar
+      <i class="material-icons right">send</i>
+    </button>
+</form>
+
+
+</section>
+
+
+
+
+<%- include("partials/footer"); -%>
