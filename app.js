@@ -20,28 +20,24 @@ mongoose.connect('mongodb://localhost:27017/CJDB', {
   useUnifiedTopology: true
 });
 
-const usuarioSchema = mongoose.Schema ({
-  _id: Number,
-  nombre: String,
-  apellido: String,
-  email: String,
-  // password: String,
-  fecha_reg: Date
-});
+// const usuarioSchema = mongoose.Schema ({
+//   _id: Number,
+//   nombre: String,
+//   apellido: String,
+//   email: String,
+//   // password: String,
+//   fecha_reg: Date
+// });
 
 const recetaSchema = mongoose.Schema ({
   _id: Number,
   titulo: String,
   descripcion: String,
-  ingredientes: {
-    nombre: String,
-    cantidad: Number,
-    medida: String
-  },
+  ingredientes: [String],
   instrucciones: [String],
-  id_usuario: Number,
+  // id_usuario: Number,
   clasificacion: {
-    categoria: String,
+    categoria: [String],
     carne: Boolean,
     lacteo: Boolean,
     parve: Boolean,
@@ -90,7 +86,7 @@ app.get("/contact", function(req, res) {
 });
 
 app.get("/new-recipe", function(req, res) {
-  res.render("new-recipe");
+  res.render("new-recipe", {categoriesArray: ["Entrada", "Plato fuerte", "Sefaradi", "Dulce", "Shabat", "Ashkenazi"]});
 });
 
 // POST METHODS

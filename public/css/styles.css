@@ -1,10 +1,18 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+    margin-top: auto;
 }
 
 section {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 /* NAVBAR - TOP SECTION */
@@ -13,14 +21,14 @@ section {
   padding-left: 20px;
 }
 
+nav {
+
+  background-color: #546e7a;
+}
+
 /******************************** MAIN PAGE ********************************/
 
 /* CATEGORIES SECTION */
-#categories {
-  margin-top: 3rem;
-  max-width: 1500px;
-  margin: 3rem auto 0;
-}
 
 .category-container {
   text-align: center;
@@ -148,11 +156,6 @@ h3 {
 
 /******************************** CONTACT PAGE ********************************/
 
-.contact-section, .about-section {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
 .contact-section {
   padding-bottom: 3rem;
 }
@@ -177,5 +180,42 @@ margin: .5rem auto 1rem;
 @media (min-width: 992px) {
   .brand-logo {
     padding-left: 15px !important;
+  }
+}
+
+
+/* NEW RECIPE PAGE */
+.porciones_container {
+  margin-top: 0;
+}
+
+#instrucciones, #ingredientes {
+  min-height: 65px;
+}
+
+.new-recipe-section p {
+  margin-bottom: 0;
+}
+
+.aditional-info-title {
+  font-size: 2rem;
+}
+
+div h3 {
+  padding-top: 1rem;
+}
+
+.secondary-title {
+  font-size: 100%;
+}
+
+button.submit {
+  margin-top: 0;
+  width: 10rem;
+}
+
+@media (max-width: 450px) {
+  #descripcion_receta {
+    min-height: 65px;
   }
 }

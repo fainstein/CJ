@@ -46,18 +46,24 @@ $(document).ready(function(){
 
 // New Recipe
 
-$(document).ready(function(){
-  $('input.autocomplete').autocomplete({
-    data: {
-      "Cucharada": null,
-      "Cucharadita": null,
-      "Gramos": null,
-      "Miligramos": null,
-      "Kilogramos": null,
-      "Taza": null,
-      "Litro": null,
-      "Mililitro": null,
-      "Centímetro cúbico": null,
-    },
-  });
-});
+
+  M.textareaAutoResize($('#descripcion_receta'));
+
+// $(document).ready(function(){
+//   $('input.autocomplete').autocomplete({
+//     data: {
+//       "Cucharada": null,
+//       "Cucharadita": null,
+//       "Gramos": null,
+//       "Miligramos": null,
+//       "Kilogramos": null,
+//       "Taza": null,
+//       "Vaso": null,
+//       "Litro": null,
+//       "Mililitro": null,
+//       "Centímetro cúbico": null,
+//       "Onzas": null,
+//       "Chorro": null
+//     },
+//   });
+// });
