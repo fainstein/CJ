@@ -1,6 +1,7 @@
 // INIT AOS
 AOS.init();
 
+
 // INIT SIDDENAV
 $(document).ready(function(){
   $('.sidenav').sidenav();
@@ -45,9 +46,20 @@ $(document).ready(function(){
 
 
 // New Recipe
+M.textareaAutoResize($('#descripcion_receta'));
 
+//Validate file to only img
+// function validateFileType(){
+//        var fileName = document.getElementById("fileName").value;
+//        var idxDot = fileName.lastIndexOf(".") + 1;
+//        var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+//        if (extFile=="jpg" || extFile=="jpeg" || extFile=="png"){
+//            //TO DO
+//        }else{
+//            alert("Only jpg/jpeg and png files are allowed!");
+//        }
+//    }
 
-  M.textareaAutoResize($('#descripcion_receta'));
 
 // $(document).ready(function(){
 //   $('input.autocomplete').autocomplete({

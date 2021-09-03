@@ -1,20 +1,50 @@
 <%- include("partials/header"); -%>
 
-<h1>Categoría: <%=categoryName%></h1>
+<section class="recipe-section">
+  <div class="row">
+    <div class="col s12">
+      <h3><%= recipe.titulo %></h3>
+      <p>Cantidad de porciones: <%= recipe.cantidad_porciones%></p>
+      <p><%= recipe.descripcion %></p>
+    </div>
+    <div class="col s12">
+      <h4>Ingredientes</h4>
+      <p>Podés marcar los ingredientes que ya utilizaste!</p>
+      <%  recipe.ingredientes.forEach(function(ingrediente){ %>
+      <p>
+        <label>
+          <input type="checkbox" />
+          <span class="ingredient-item"><%=ingrediente%></span>
+        </label>
+      </p>
+      <% }) %>
+    </div>
+    <div class="col s12">
+      <h4>Instrucciones</h4>
+      <%  for (let i = 0; i< recipe.instrucciones.length ; i++) { %>
+        <div class="instruction-container">
+
+            <div class="circle-number">
+              <span><%= i+1 %></span>
+            </div>
+
+            <p class="recipe-instruction">
+              <%=recipe.instrucciones[i];%>
+            </p>
+
+        <% }; %>
+      </div>
+
+    </div>
+    <div class="col s12">
+
+    </div>
+  </div>
 
 
-<!-- <a class='dropdown-trigger btn' href='#' data-target='category-dropdown'>Categoría
-  <span class="material-icons drop-down-icon">expand_more</span>
-</a>
 
-<ul id='category-dropdown' class='dropdown-content'>
-  <li><a href="#!">Sefaradi</a></li>
-  <li><a href="#!">Platos fuertes</a></li>
-  <li><a href="#!">Entradas</a></li>
-  <li><a href="#!">Ashkenazi</a></li>
-  <li><a href="#!">Dulce</a></li>
-  <li><a href="#!">Shabat</a></li>
-</ul> -->
+</section>
+
 
 
 <%- include("partials/footer"); -%>

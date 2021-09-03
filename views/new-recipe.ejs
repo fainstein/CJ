@@ -1,73 +1,114 @@
 <%- include("partials/header"); -%>
 
 <section class="new-recipe-section">
-  <form action="/new-recipe" method="post">
+  <form action="/new-recipe" method="post" class="new-recipe-form" id="new-recipe-form">
     <div class="container">
-      <h3>¡Sube tu receta!</h3>
-      <p>Buscamos difundir las buenas tradiciones. Tu receta puede embellecer la mesa y el tiempo en familia del resto. ¿Tenés una receta antigua? ¿Un truco bajo la manga?</p>
-
       <div class="row">
+        <div class="col s12">
+          <h3 class="new-recipe-title">¡Sube tu receta!</h3>
+          <p class="sub-title">Buscamos difundir las buenas tradiciones. Tu receta puede embellecer la mesa y el tiempo en familia del resto. ¿Tenés una receta antigua? ¿un truco bajo la manga? Animate a compartirlo.</p>
+        </div>
         <div class="input-field col s12">
-          <input placeholder="Knishes tradicionales" id="titulo_receta" type="text" class="validate" required>
-          <label for="titulo_receta">Título</label>
+          <input placeholder="Knishes tradicionales" name="titulo" id="titulo" type="text" class="validate" required>
+          <label for="titulo">Título</label>
         </div>
         <div class="input-field col s12 porciones_container">
           <p class="range-field">
             <label for="cantidad_porciones">Cantidad de porciones</label>
-            <input type="range" id="cantidad_porciones" min="0" max="15" value="1" required />
+            <input type="range" name="cantidad_porciones" id="cantidad_porciones" min="0" max="15" value="1" required>
           </p>
         </div>
         <div class="input-field col s12">
-          <textarea id="descripcion_receta" placeholder="Un clásico de los viernes, mi abuela solía..." class="materialize-textarea .receta-textarea"></textarea>
+          <textarea id="descripcion" placeholder="Un clásico de los viernes, mi abuela solía..." class="materialize-textarea .receta-textarea" name="descripcion" form="new-recipe-form"></textarea>
           <label for="descripcion_receta">Descripción</label>
         </div>
         <div class="input-field col s12">
-          <textarea id="ingredientes" placeholder="1 Taza de Harina&#10;2 Cucharadas de Aceite" class="materialize-textarea receta-textarea"></textarea>
+          <textarea id="ingredientes" placeholder="1 Taza de Harina&#10;2 Cucharadas de Aceite" class="materialize-textarea receta-textarea" name="ingredientes" form="new-recipe-form"></textarea>
           <label for="ingredientes">Ingredientes</label>
           <span class="helper-text">Ponga cada ingrediente y su cantidaad en un renglón diferente</span>
         </div>
         <div class="input-field col s12">
-          <textarea id="instrucciones" placeholder="Mezclar la harina con la levadura&#10;Incorporar el agua e ir amasando" class="materialize-textarea receta-textarea"></textarea>
+          <textarea id="instrucciones" placeholder="Mezclar la harina con la levadura&#10;Incorporar el agua e ir amasando" class="materialize-textarea receta-textarea" name="instrucciones" form="new-recipe-form"></textarea>
           <label for="instrucciones">Preparación</label>
           <span class="helper-text">Ponga cada paso en un renglón diferente</span>
         </div>
-
-        <div class="file-field input-field">
-          <div class="btn">
-            <span>Subir imagen<i class="material-icons">add_a_photo</i></span>
-            <input type="file">
+        <!-- <div class=" col s12 file-field input-field">
+          <div class="btn waves-effect waves-light blue-grey darken-1">
+            <span><i class="material-icons">add_a_photo</i></span>
+            <input type="file" name="img_receta" accept="image/png, image/gif, image/jpeg" required>
           </div>
           <div class="file-path-wrapper">
             <input class="file-path validate" type="text">
           </div>
-        </div>
+        </div> -->
+      </div>
+      <div class="row">
 
         <div class="aditional-info col s12">
-          <h3 class="aditional-info-title">Información adicional</h3>
+          <h3 class="aditional-info-title primary-title">Información adicional</h3>
           <p>Completa los casilleros que cumplan con tu receta</p>
         </div>
 
 
         <div class="col s12">
           <h3 class="aditional-info-title secondary-title">Categoría</h3>
-          <% for (let i=0; i <categoriesArray.length;  i++ ) { %>
           <div class="col s6 m4">
             <p>
               <label>
-                <input name=<%=  categoriesArray[i]%> type="checkbox" />
-                <span><%=  categoriesArray[i]%></span>
+                <input name="entrada" type="checkbox" />
+                <span>Entrada</span>
               </label>
             </p>
           </div>
-          <% } %>
+          <div class="col s6 m4">
+            <p>
+              <label>
+                <input name="platoFuerte" type="checkbox" />
+                <span>Plato fuerte</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6 m4">
+            <p>
+              <label>
+                <input name="sefaradi" type="checkbox" />
+                <span>Sefaradi</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6 m4">
+            <p>
+              <label>
+                <input name="dulce" type="checkbox" />
+                <span>Dulce</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6 m4">
+            <p>
+              <label>
+                <input name="shabat" type="checkbox" />
+                <span>Shabat</span>
+              </label>
+            </p>
+          </div>
+          <div class="col s6 m4">
+            <p>
+              <label>
+                <input name="ashkenazi" type="checkbox" />
+                <span>Ashkenazi</span>
+              </label>
+            </p>
+          </div>
         </div>
+
         <div class="col s12">
           <h3 class="aditional-info-title secondary-title">¿Qué contiene?</h3>
 
           <div class="col s6 m4">
             <p>
               <label>
-                <input name="kashrut" type="radio" />
+                <input name="kashrut" type="radio" value="carne" />
                 <span>Carne/Pollo</span>
               </label>
             </p>
@@ -76,7 +117,7 @@
           <div class="col s6 m4">
             <p>
               <label>
-                <input name="kashrut" type="radio" />
+                <input name="kashrut" type="radio" value="lacteo" />
                 <span>Leche</span>
               </label>
             </p>
@@ -85,40 +126,44 @@
           <div class="col s6 m4">
             <p>
               <label>
-                <input name="kashrut" type="radio" />
+                <input name="kashrut" type="radio" value="parve" />
                 <span>Es parve</span>
               </label>
             </p>
           </div>
 
         </div>
-        <div class="col s12">
+      </div>
 
+      <div class="row credit-section">
+        <div class="col s12">
           <h3 class="aditional-info-title secondary-title">Créditos de la receta</h3>
 
-          <div class="input-field col s12 m6">
-            <input name="first_name" id="first_name" type="text" class="validate" required>
-            <label for="first_name">Nombre</label>
-          </div>
-          <div class="input-field col s12 m6">
-            <input name="last_name" id="last_name" type="text" class="validate" required>
-            <label for="last_name">Apellido</label>
-          </div>
-          <div class="input-field col s12">
-            <input name="email" id="email" type="email" class="validate" required>
-            <label for="email">Correo electrónico</label>
-            <p>Esta información no será compartida en la receta.</p>
-          </div>
+        </div>
+
+        <div class="input-field col s12 m6">
+          <input name="first_name" id="first_name" type="text" class="validate" required>
+          <label for="first_name">Nombre</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <input name="last_name" id="last_name" type="text" class="validate" required>
+          <label for="last_name">Apellido</label>
+        </div>
+        <div class="input-field col s12">
+          <input name="email" id="email" type="email" class="validate" required>
+          <label for="email">Correo electrónico</label>
+          <p>Esta información no será compartida en la receta.</p>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col s12">
           <button class="btn waves-effect waves-light blue-grey darken-1 submit" type="submit" name="action">Enviar
             <i class="material-icons right">send</i>
           </button>
+        </div>
       </div>
-
-      </div>
-
-
     </div>
-
   </form>
 </section>
 

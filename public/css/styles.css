@@ -5,8 +5,8 @@ body {
   flex-direction: column;
 }
 
-footer{
-    margin-top: auto;
+footer {
+  margin-top: auto;
 }
 
 section {
@@ -22,14 +22,11 @@ section {
 }
 
 nav {
-
   background-color: #546e7a;
 }
 
 /******************************** MAIN PAGE ********************************/
-
 /* CATEGORIES SECTION */
-
 .category-container {
   text-align: center;
   margin-top: 10px;
@@ -131,7 +128,7 @@ h3 {
   padding: 4px 14px !important;
 }
 
-.card-content{
+.card-content {
   padding-bottom: 0 !important;
 }
 
@@ -139,7 +136,6 @@ h3 {
   object-fit: cover;
   height: 200px;
 }
-
 
 /* Footer Section */
 .page-footer {
@@ -152,10 +148,7 @@ h3 {
   color: #FFF;
 }
 
-
-
 /******************************** CONTACT PAGE ********************************/
-
 .contact-section {
   padding-bottom: 3rem;
 }
@@ -169,11 +162,10 @@ input, label, option {
 }
 
 /******************************** RESULTS PAGE ********************************/
-
 #results-section .card {
-max-width: 500px;
-position: relative;
-margin: .5rem auto 1rem;
+  max-width: 500px;
+  position: relative;
+  margin: .5rem auto 1rem;
 }
 
 /* MEDIA QUERIES */
@@ -183,8 +175,7 @@ margin: .5rem auto 1rem;
   }
 }
 
-
-/* NEW RECIPE PAGE */
+/******************************** NEW RECIPE PAGE ********************************/
 .porciones_container {
   margin-top: 0;
 }
@@ -197,12 +188,20 @@ margin: .5rem auto 1rem;
   margin-bottom: 0;
 }
 
+.new-recipe-section .sub-title {
+  margin-bottom: 1.75rem;
+}
+
 .aditional-info-title {
   font-size: 2rem;
 }
 
+.aditional-info-title.primary-title {
+  margin-top: 0;
+}
+
 div h3 {
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
 }
 
 .secondary-title {
@@ -214,8 +213,61 @@ button.submit {
   width: 10rem;
 }
 
+/******************************** RECIPE PAGE ********************************/
+.recipe-section h4 {
+  color: #546e7a;
+}
+
+.recipe-section .ingredient-item {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.recipe-section .circle-number {
+  background-color: #546e7a;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently upported by Chrome, Edge, Opera and Firefox */
+}
+
+.recipe-section .recipe-instruction {
+  margin-left: 35px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  /* margin: 0 35px auto 2rem; */
+}
+
+.recipe-section .instruction-container {
+margin-top: 2rem;
+}
+
+/* ON MOBILE */
 @media (max-width: 450px) {
   #descripcion_receta {
     min-height: 65px;
+  }
+
+  section {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  h3.new-recipe-title {
+    font-size: 2.7rem;
   }
 }
