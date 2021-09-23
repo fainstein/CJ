@@ -163,15 +163,26 @@ input, label, option {
 
 /******************************** RESULTS PAGE ********************************/
 #results-section .card {
+  min-width: 220px;
   max-width: 500px;
   position: relative;
   margin: .5rem auto 1rem;
 }
+#results-section a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 /* MEDIA QUERIES */
+/*DESKTOP*/
 @media (min-width: 992px) {
   .brand-logo {
     padding-left: 15px !important;
+  }
+  #results-section .card {
+    min-width: 288px;
   }
 }
 

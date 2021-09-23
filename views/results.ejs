@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%>
 
-<section id="mobile-search">
+<!-- <section id="mobile-search">
   <div class="container">
 
     <div class="filters-container">
@@ -9,103 +9,37 @@
 
       <div class="chip">
         
-        <%=categoryName%>
+    
         <i class="close material-icons">close</i>
       </div>
     </div>
 
 
   </div>
-</section>
+</section> -->
 
 
 <section id="results-section">
-
   <div class="row">
+
+    <% recipesFound.slice(-9).forEach(recipe => { %> 
+    <a href="/recipes/<%=recipe._id%>">
     <div class="col l4 m6 s12">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
-          <img src="https://i.imgur.com/koJKOSI.jpg">
-          <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
+          <img src="./images/<%=recipe.imagen%>">
+          <!-- <span class="card-title"><i class="material-icons">star star star star star_half</i></span> -->
         </div>
         <div class="card-content">
-          <p><strong>Kippe al horno</strong></p>
+          <p><strong><%= recipe.titulo %> </strong></p>
         </div>
         <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          <p><%= recipe.descripcion.length < 140 ? recipe.descripcion : recipe.descripcion.substring(0,140) + " ..." %></p>
         </div>
       </div>
     </div>
-    <div class="col l4 m6 s12">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://i.imgur.com/koJKOSI.jpg">
-          <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
-        </div>
-        <div class="card-content">
-          <p><strong>Kippe al horno</strong></p>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-      </div>
-    </div>
-    <div class="col l4 m6 s12">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://i.imgur.com/koJKOSI.jpg">
-          <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
-        </div>
-        <div class="card-content">
-          <p><strong>Kippe al horno</strong></p>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-      </div>
-    </div>
-    <div class="col l4 m6 s12">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://i.imgur.com/koJKOSI.jpg">
-          <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
-        </div>
-        <div class="card-content">
-          <p><strong>Kippe al horno</strong></p>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-      </div>
-    </div>
-    <div class="col l4 m6 s12">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://i.imgur.com/koJKOSI.jpg">
-          <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
-        </div>
-        <div class="card-content">
-          <p><strong>Kippe al horno</strong></p>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-      </div>
-    </div>
-    <div class="col l4 m6 s12">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://i.imgur.com/koJKOSI.jpg">
-          <span class="card-title"><i class="material-icons">star star star star star_half</i></span>
-        </div>
-        <div class="card-content">
-          <p><strong>Kippe al horno</strong></p>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-        </div>
-      </div>
-    </div>
+  </a>
+  <%}); %>
   </div>
 
 </section>
