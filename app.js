@@ -9,7 +9,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'images/');
+    cb(null, './images/');
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname)
@@ -53,8 +53,8 @@ app.use(express.static("public"));
 app.use('/images', express.static("images"));
 // MONGOOSE MONGODB CONNECT
 
-mongoose.connect('mongodb+srv://foodmaster:PIGSd0ntfly@cj-cluster.dztz8.mongodb.net/CJDB', {
-// mongoose.connect("mongodb://localhost:27017/CJDB", {
+// mongoose.connect('mongodb+srv://foodmaster:PIGSd0ntfly@cj-cluster.dztz8.mongodb.net/CJDB', {
+mongoose.connect("mongodb://localhost:27017/CJDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
