@@ -267,6 +267,13 @@ button.submit {
 margin-top: 2rem;
 }
 
+.recipe-img {
+height: 450px;
+width: 450px;
+object-fit:cover;
+
+}
+
 /* ON MOBILE */
 @media (max-width: 450px) {
   #descripcion_receta {

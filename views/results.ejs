@@ -8,8 +8,8 @@
 
 
       <div class="chip">
-        
-    
+
+
         <i class="close material-icons">close</i>
       </div>
     </div>
@@ -22,12 +22,12 @@
 <section id="results-section">
   <div class="row">
 
-    <% recipesFound.slice(-9).forEach(recipe => { %> 
+    <% recipesFound.slice(-9).forEach(recipe => { %>
     <a href="/recipes/<%=recipe._id%>">
     <div class="col l4 m6 s12">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="./images/<%=recipe.imagen%>">
+          <img src="../<%=recipe.imagen%>">
           <!-- <span class="card-title"><i class="material-icons">star star star star star_half</i></span> -->
         </div>
         <div class="card-content">

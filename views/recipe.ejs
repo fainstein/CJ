@@ -4,10 +4,13 @@
   <div class="row">
     <div class="col s12">
       <h3><%= recipe.titulo %></h3>
-      <p>Cantidad de porciones: <%= recipe.cantidad_porciones%></p>
       <p><%= recipe.descripcion %></p>
+      <!-- <p>Cantidad de porciones: <%= recipe.cantidad_porciones%></p> -->
     </div>
-    <div class="col s12">
+    <div class="col l6">
+      <img class="recipe-img" src="../<%=recipe.imagen%>">
+    </div>
+    <div class="col l6">
       <h4>Ingredientes</h4>
       <p>Podés marcar los ingredientes que ya utilizaste!</p>
       <%  recipe.ingredientes.forEach(function(ingrediente){ %>

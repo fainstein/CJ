@@ -9,7 +9,7 @@ const multer = require('multer');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './images/');
+    cb(null, 'images/');
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname)
@@ -50,10 +50,11 @@ app.use(express.urlencoded({
 
 
 app.use(express.static("public"));
-app.use('/uploads', express.static("images"));
+app.use('/images', express.static("images"));
 // MONGOOSE MONGODB CONNECT
 
-mongoose.connect('mongodb+srv://foodmaster:PIGSd0ntfly@cj-cluster.dztz8.mongodb.net/CJDB', {
+// mongoose.connect('mongodb+srv://foodmaster:PIGSd0ntfly@cj-cluster.dztz8.mongodb.net/CJDB', {
+mongoose.connect("mongodb://localhost:27017/CJDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -163,22 +164,6 @@ app.get("/results/:query", function (req, res) {
     });
   }
 
-  Recipe.find({
-    titulo: {
-      '$regex': req.params.query,
-      '$options': 'i'
-    }
-  }, function (err, recipes) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(recipes);
-      res.render("results", {
-        recipesFound: recipes
-      });
-    }
-  });
-
 });
 
 app.get("/log-in", function (req, res) {
@@ -219,10 +204,10 @@ app.get("/recipes/:recipeId", function (req, res) {
 
 app.post("/results", function (req, res) {
 
-  res.redirect("/results/" + _.lowerCase(req.body.searchQuery));
+  res.redirect("/results/" + _.toLower(req.body.searchQuery));
 })
 
-app.post("/new-recipe", upload.single('imagenReceta'), function (req, res) {
+app.post("/new-recipe", upload.single('imagenUsuario'), function (req, res) {
 
   const ingredientsArray = req.body.ingredientes.split(/\r\n|\r|\n/g);
   const instructionsArray = req.body.instrucciones.split(/\r\n|\r|\n/g);
@@ -273,6 +258,8 @@ app.post("/new-recipe", upload.single('imagenReceta'), function (req, res) {
     apellido_autor: req.body.last_name,
     mail_autor: req.body.email
   })
+
+
 
   switch (req.body.kashrut) {
     case "carne":
