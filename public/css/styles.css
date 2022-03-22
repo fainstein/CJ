@@ -302,5 +302,9 @@ button.submit {
     min-width: 300px;
     width: 100%;
   }
+
+  .recipe-section .row .col {
+    padding: 0;
+  }
+
 }
-`
