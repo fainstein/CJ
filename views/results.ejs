@@ -20,11 +20,13 @@
 
 
 <section id="results-section">
+  <div class="container">
+
   <div class="row">
 
     <% recipesFound.slice(-9).forEach(recipe => { %>
     <a href="/recipes/<%=recipe._id%>">
-    <div class="col l4 m6 s12">
+    <div class="col l6 m6 s12">
       <div class="card hoverable">
         <div class="card-image">
           <img src="../<%=recipe.imagen%>">
@@ -41,6 +43,7 @@
   </a>
   <%}); %>
   </div>
+</div>
 
 </section>
 

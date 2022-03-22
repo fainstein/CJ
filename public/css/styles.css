@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ section {
 
 /* NAVBAR - TOP SECTION */
 .brand-logo {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   padding-left: 20px;
 }
 
@@ -54,7 +54,7 @@ nav {
 }
 
 #categories p:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -67,7 +67,7 @@ nav {
 }
 
 #categories p:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -143,9 +143,9 @@ h3 {
 }
 
 .brand-footer a {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 /******************************** CONTACT PAGE ********************************/
@@ -157,23 +157,23 @@ h3 {
   margin-top: 25px;
 }
 
-input, label, option {
-  font-family: 'Montserrat', sans-serif;
+input,
+label,
+option {
+  font-family: "Montserrat", sans-serif;
 }
 
 /******************************** RESULTS PAGE ********************************/
 #results-section .card {
-  min-width: 220px;
+  /* min-width: 220px; */
   max-width: 500px;
   position: relative;
-  margin: .5rem auto 1rem;
+  margin: 0.5rem auto 1rem;
 }
 #results-section a {
   text-decoration: none;
   color: inherit;
 }
-
-
 
 /* MEDIA QUERIES */
 /*DESKTOP*/
@@ -182,7 +182,7 @@ input, label, option {
     padding-left: 15px !important;
   }
   #results-section .card {
-    min-width: 288px;
+    /* min-width: 288px; */
   }
 }
 
@@ -191,7 +191,8 @@ input, label, option {
   margin-top: 0;
 }
 
-#instrucciones, #ingredientes {
+#instrucciones,
+#ingredientes {
   min-height: 65px;
 }
 
@@ -264,15 +265,15 @@ button.submit {
 }
 
 .recipe-section .instruction-container {
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .recipe-img {
-height: 450px;
-width: 450px;
-object-fit:cover;
-margin-top: 1.52rem;
-margin-left: auto;
+  height: 450px;
+  width: 450px;
+  object-fit: cover;
+  margin-top: 1.52rem;
+  margin-left: auto;
 }
 
 /* ON MOBILE */
@@ -282,11 +283,23 @@ margin-left: auto;
   }
 
   section {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   h3.new-recipe-title {
     font-size: 2.7rem;
+  }
+}
+
+/* ON TABLET AND MOBILE */
+@media (max-width: 700px) {
+  .recipe-title-section {
+    width: 80vw;
+  }
+
+  .recipe-img {
+    min-width: 300px;
+    width: 100%;
   }
 }
